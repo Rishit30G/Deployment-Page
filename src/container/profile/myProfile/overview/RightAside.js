@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FeatherIcon from 'feather-icons-react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Col, Row } from 'antd';
+// import { Col, Row } from 'antd';
 import ModalVideo from 'react-modal-video';
 import { RightAsideWrapper } from './style';
 import { Button } from '../../../../components/buttons/buttons';
@@ -12,7 +12,8 @@ import './video-modal.css';
 
 function RightAside() {
   const dispatch = useDispatch();
-  const { friends, gallery } = useSelector((state) => {
+  // gallary 
+  const { friends,  } = useSelector((state) => {
     return {
       friends: state.Profile.friends,
       gallery: state.gallery.data,
@@ -59,7 +60,7 @@ function RightAside() {
           </Link>
         </ul>
       </Cards>
-      <Cards
+      {/* <Cards
         isbutton={
           <Link className="btn-seeAll" to="/admin/pages/gallery">
             See All
@@ -107,7 +108,7 @@ function RightAside() {
             })}
           </Row>
         </div>
-      </Cards>
+      </Cards> */}
     </RightAsideWrapper>
   );
 }

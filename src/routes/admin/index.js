@@ -11,6 +11,7 @@ import Features from './features';
 import Axios from './axios';
 import Gallery from './gallery';
 import withAdminLayout from '../../layout/withAdminLayout';
+import { Article } from '../../container/articles/Article';
 
 const Projects = lazy(() => import('./projects'));
 const Calendars = lazy(() => import('../../container/Calendar'));
@@ -62,6 +63,7 @@ function Admin() {
         <Route path={`${path}/contact/addNew`} component={ContactAddNew} />
         <Route path={`${path}/app/calendar`} component={Calendar} />
         <Route path={`${path}/widgets`} component={Widgets} />
+        <Route path={`${path}/articles`} component={Article} />
       </Suspense>
     </Switch>
   );

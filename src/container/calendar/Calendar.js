@@ -2,7 +2,7 @@ import React, { useState, lazy, Suspense } from 'react';
 import { Row, Col, Skeleton } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import CalenDar from 'react-calendar';
-import { Link, Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Aside, CalendarWrapper } from './Style';
 import { ShareButtonPageHeader } from '../../components/buttons/share-button/share-button';
@@ -24,7 +24,7 @@ const ScheduleCalendar = lazy(() => import('./overview/Schedule'));
 
 function Calendars() {
   const dispatch = useDispatch();
-  const { events, isVisible } = useSelector(state => {
+  const { isVisible } = useSelector(state => {
     return {
       events: state.Calender.events,
       isVisible: state.Calender.eventVisible,
@@ -47,12 +47,12 @@ function Calendars() {
     <>
       <PageHeader
         ghost
-        title="Calendar"
+        title="EVERYTHING YOU NEED IN WEB 3.0 DEFI CALENDAR"
         buttons={[
           <div key="1" className="page-header-actions">
             <CalendarButtonPageHeader />
             <ExportButtonPageHeader />
-            <ShareButtonPageHeader />
+            <ShareButtonPageHeader />   
             <Button size="small" type="primary">
               <FeatherIcon icon="plus" size={14} />
               Add New
@@ -71,28 +71,13 @@ function Calendars() {
                 </Button>
                 <div className="calendar-display">
                   <CalenDar next2Label={null} prev2Label={null} onChange={onChange} value={state.date} />
+                 
                 </div>
                 <br />
                 <Cards headless>
                   <h3 className="listHeader">
-                    My Calendars
-                    <Link onClick={onHandleVisible} className="add-label" to="#">
-                      <FeatherIcon icon="plus" size={14} />
-                    </Link>
+                   Space for ADs 
                   </h3>
-                  <ul className="event-list">
-                    {events.map(event => {
-                      const { id, title, label } = event;
-                      return (
-                        <li key={id}>
-                          <Link to="#">
-                            <span className={`bullet ${label}`} />
-                            {title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
                 </Cards>
               </Aside>
             </Col>
@@ -113,6 +98,7 @@ function Calendars() {
                   <Route path={`${path}/schedule`} component={ScheduleCalendar} />
                 </Suspense>
               </Switch>
+
             </Col>
           </Row>
         </CalendarWrapper>

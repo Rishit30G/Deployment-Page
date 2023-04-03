@@ -345,7 +345,6 @@ const ArticleTabContentWrap = Styled.div`
 `;
 
 const PopularArticleWrap = Styled.div`
-    padding-top: 65px;
     border-top: 1px solid ${({ theme }) => theme['border-color-normal']};
     .sDash_popular-article{
         .sDash_popular-article__title{
@@ -422,10 +421,12 @@ const PopularArticleWrap = Styled.div`
         .sDash_popular-article__box{
             direction: ltr;
             margin: 0 0 0px 0;
-            @media only screen and (max-width: 899px){
+            @media only screen and (max-width: 899px)
+            {
                 margin: 0;
             }
-            .sDash_popular-article__single {
+            .sDash_popular-article__single 
+            {
                 margin: 0 0 15px 0;
                 direction: ${({ theme }) => (theme.rtl ? 'rtl' : 'ltr')};
                 @media only screen and (max-width: 899px){

@@ -23,9 +23,9 @@ function UserBio() {
             <li>
               <FeatherIcon icon="mail" size={14} /> <span>Clayton@example.com</span>
             </li>
-            <li>
+            {/* <li>
               <FeatherIcon icon="phone" size={14} /> <span>+44 (0161) 347 8854</span>
-            </li>
+            </li> */}
             <li>
               <FeatherIcon icon="globe" size={14} /> <span>www.example.com</span>
             </li>

@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { Row, Col, Radio, Spin } from 'antd';
-import FeatherIcon from 'feather-icons-react';
+import { Row, Col, Radio, Spin, Button } from 'antd';
+// import FeatherIcon from 'feather-icons-react';
 import { useDispatch, useSelector } from 'react-redux';
+import { RightOutlined } from '@ant-design/icons';
 import { Focard, CardGroup } from '../../style';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
 import Heading from '../../../../components/heading/heading';
-import { ChartjsAreaChart } from '../../../../components/charts/chartjs';
+// import { ChartjsAreaChart } from '../../../../components/charts/chartjs';
 import { forcastOverviewGetData, forcastOverviewFilterData } from '../../../../redux/chartContent/actionCreator';
-import { chartLinearGradient } from '../../../../components/utilities/utilities';
+// import { chartLinearGradient } from '../../../../components/utilities/utilities';
+
 
 function FacebookOverview() {
   const dispatch = useDispatch();
@@ -59,15 +61,15 @@ function FacebookOverview() {
                         <div className="focard-details growth-upward">
                           <Heading as="h1">{forcastOverviewState.Engaged}</Heading>
                           <p className="subtitle">Engaged Users</p>
-                          <p className="focard-status">
+                          {/* <p className="focard-status">
                             <span className="focard-status__percentage">
                               <FeatherIcon icon="trending-up" />
                               25%
                             </span>
                             <span> 20,641 (prev)</span>
-                          </p>
+                          </p> */}
                         </div>
-                        <div className="focard-chart">
+                        {/* <div className="focard-chart">
                           <ChartjsAreaChart
                             id="engaged"
                             labels={forcastOverviewState.EnLabels}
@@ -88,7 +90,7 @@ function FacebookOverview() {
                             ]}
                             height={window.innerWidth <= 1199 ? 100 : 165}
                           />
-                        </div>
+                        </div> */}
                       </Focard>
                     </Col>
                     <Col md={12} sm={12} xs={24}>
@@ -96,15 +98,15 @@ function FacebookOverview() {
                         <div className="focard-details growth-upward">
                           <Heading as="h1">{forcastOverviewState.Impressions}</Heading>
                           <p className="subtitle">Page Impressions</p>
-                          <p className="focard-status">
+                          {/* <p className="focard-status">
                             <span className="focard-status__percentage">
                               <FeatherIcon icon="trending-up" />
                               14%
                             </span>
                             <span> 20,641 (prev)</span>
-                          </p>
+                          </p> */}
                         </div>
-                        <div className="focard-chart">
+                        {/* <div className="focard-chart">
                           <ChartjsAreaChart
                             id="impression"
                             labels={forcastOverviewState.ImLabels}
@@ -125,7 +127,7 @@ function FacebookOverview() {
                             ]}
                             height={window.innerWidth <= 1199 ? 100 : 165}
                           />
-                        </div>
+                        </div> */}
                       </Focard>
                     </Col>
                   </Row>
@@ -137,15 +139,15 @@ function FacebookOverview() {
                         <div className="focard-details growth-downward">
                           <Heading as="h1">{forcastOverviewState.Like}</Heading>
                           <p className="subtitle">Total Page Likes</p>
-                          <p className="focard-status">
+                          {/* <p className="focard-status">
                             <span className="focard-status__percentage">
                               <FeatherIcon icon="trending-down" />
                               12%
                             </span>
                             <span> 20,641 (prev)</span>
-                          </p>
+                          </p> */}
                         </div>
-                        <div className="focard-chart">
+                        {/* <div className="focard-chart">
                           <ChartjsAreaChart
                             labels={forcastOverviewState.LiLabels}
                             id="likes"
@@ -167,45 +169,13 @@ function FacebookOverview() {
                             ]}
                             height={window.innerWidth <= 1199 ? 100 : 165}
                           />
-                        </div>
+                        </div> */}
                       </Focard>
                     </Col>
                     <Col md={12} sm={12} xs={24}>
-                      <Focard>
-                        <div className="focard-details growth-upward">
-                          <Heading as="h1">{forcastOverviewState.Impressions2}</Heading>
-                          <p className="subtitle">Page Impressions</p>
-                          <p className="focard-status">
-                            <span className="focard-status__percentage">
-                              <FeatherIcon icon="trending-up" />
-                              14%
-                            </span>
-                            <span> 20,641 (prev)</span>
-                          </p>
-                        </div>
-                        <div className="focard-chart">
-                          <ChartjsAreaChart
-                            labels={forcastOverviewState.ImLabels2}
-                            id="impression2"
-                            datasets={[
-                              {
-                                data: forcastOverviewState.ImData2,
-                                borderColor: '#FA8B0C',
-                                borderWidth: 3,
-                                fill: true,
-                                backgroundColor: () =>
-                                  chartLinearGradient(document.getElementById('impression2'), 165, {
-                                    start: '#FA8B0C10',
-                                    end: '#FA8B0C01',
-                                  }),
-                                pointHoverRadius: 0,
-                                pointHoverBorderColor: 'transparent',
-                              },
-                            ]}
-                            height={window.innerWidth <= 1199 ? 100 : 165}
-                          />
-                        </div>
-                      </Focard>
+                     <Button type="primary" icon={<RightOutlined />}>
+                      Unlock for More 
+                     </Button>
                     </Col>
                   </Row>
                 </Col>

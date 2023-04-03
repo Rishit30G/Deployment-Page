@@ -172,6 +172,12 @@ function MonthCalendar() {
             value={state.date}
           />
         </div>
+        <Button type="primary">
+          Live Proposal
+        </Button>
+        <Button type="primary"> 
+          Grants 
+        </Button>
         <div className="calendar-header__right">
           <ul>
             <li>

@@ -1,12 +1,12 @@
 import React from 'react';
-import FeatherIcon from 'feather-icons-react';
+// import FeatherIcon from 'feather-icons-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Col, Row } from 'antd';
 import { UserCard } from '../style';
 import Heading from '../../../components/heading/heading';
 import { Cards } from '../../../components/cards/frame/cards-frame';
-import { Button } from '../../../components/buttons/buttons';
+// import { Button } from '../../../components/buttons/buttons';
 
 function UserCards({ user }) {
   const { name, designation, img } = user;
@@ -25,7 +25,7 @@ function UserCards({ user }) {
               <p className="card__designation">{designation}</p>
             </div>
 
-            <div className="card__actions">
+            {/* <div className="card__actions">
               <Button size="default" type="white">
                 <FeatherIcon icon="mail" size={14} />
                 Message
@@ -34,31 +34,31 @@ function UserCards({ user }) {
                 <FeatherIcon icon="user-plus" size={14} />
                 Following
               </Button>
-            </div>
+            </div> */}
             <div className="card__info">
               <Row gutter={15}>
                 <Col xs={8}>
                   <div className="info-single">
                     <Heading className="info-single__title" as="h2">
-                      $72,572
+                      Yes
                     </Heading>
-                    <p>Total Revenue</p>
+                    <p>Active</p>
                   </div>
                 </Col>
                 <Col xs={8}>
                   <div className="info-single">
                     <Heading className="info-single__title" as="h2">
-                      3,257
+                      24
                     </Heading>
-                    <p>Orders</p>
+                    <p>Reputation (XP)</p>
                   </div>
                 </Col>
                 <Col xs={8}>
                   <div className="info-single">
                     <Heading className="info-single__title" as="h2">
-                      74
+                      1
                     </Heading>
-                    <p>Products</p>
+                    <p>Articles Published</p>
                   </div>
                 </Col>
               </Row>

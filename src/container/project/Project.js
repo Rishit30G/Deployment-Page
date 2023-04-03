@@ -65,11 +65,10 @@ function Project({ match }) {
       <ProjectHeader>
         <PageHeader
           ghost
-          title="Projects"
-          subTitle={<>12 Running Projects</>}
+          title="Keep up with all Proposals and Grants"
           buttons={[
             <Button onClick={showModal} key="1" type="primary" size="default">
-              <FeatherIcon icon="plus" size={16} /> Create Projects
+              <FeatherIcon icon="plus" size={16} /> Suggest a Project/Proposal
             </Button>,
           ]}
         />
@@ -84,27 +83,22 @@ function Project({ match }) {
                     <ul>
                       <li className={state.categoryActive === 'all' ? 'active' : 'deactivate'}>
                         <Link onClick={() => onChangeCategory('all')} to="#">
-                          All
+                           All
                         </Link>
                       </li>
                       <li className={state.categoryActive === 'progress' ? 'active' : 'deactivate'}>
                         <Link onClick={() => onChangeCategory('progress')} to="#">
-                          In Progress
+                         Live
                         </Link>
                       </li>
                       <li className={state.categoryActive === 'complete' ? 'active' : 'deactivate'}>
                         <Link onClick={() => onChangeCategory('complete')} to="#">
-                          Complete
+                          Upcoming
                         </Link>
                       </li>
                       <li className={state.categoryActive === 'late' ? 'active' : 'deactivate'}>
                         <Link onClick={() => onChangeCategory('late')} to="#">
-                          Late
-                        </Link>
-                      </li>
-                      <li className={state.categoryActive === 'early' ? 'active' : 'deactivate'}>
-                        <Link onClick={() => onChangeCategory('early')} to="#">
-                          Early
+                          Finished
                         </Link>
                       </li>
                     </ul>
